@@ -1,2 +1,2 @@
 # python
-you can find examples of AWS automation using "Python".
+You can find examples of "AWS automation using Python".
