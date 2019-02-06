@@ -1,1 +1,1 @@
-You can find examples of "AWS automation using Python".
+You can find Automation scripts by switching branches.
