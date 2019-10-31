@@ -175,5 +175,58 @@ add(x=5,y=3) #named or keyword arguments
 add(5,y=3) #positional arguments should go first
 #function returns null by default 
 
+#lambdas in python
+#lambdas are functions without name
+(lambda x, y: x+y)(5,7)
+def double(x):
+    return x * 2
+sequence = [1, 2, 3, 4, 5]
+doubled = [double(x) for x in sequence]
+#doubled1 = list(map(lambda x: x * 2 sequence))
 
+#dictionary comprehensions
+users = [ 
+    (0, "rolf", "password"),
+    (1, "bob", "bob123!"),
+    (2, "harry", "harry123"),
+]
+username_mapping = {user[1]: user for user in users}
+print(username_mapping)
+_, username, password = username_mapping["rolf"]
 
+student = {"name": "jose", "school": "computing", "grades": (66, 77, 88) }
+print(student["grades"])
+
+#unpacking arguments
+#collecting multiple arguments into single variable
+def multiply(*args):
+    total = 1
+    for arg in args:
+        total *= arg
+    return (total)
+def apply(*args, operator):
+    if operator == "*":
+        return multiply(*args)
+    elif operator == "+":
+        return sum(args)
+    else:
+        return "no valid operator provided to apply()"
+print(apply(1,2,33, operator="*"))
+print(multiply(1,2,3))
+def add(x,y):
+    return x+y
+nums = [3, 5]
+print(add(*nums))
+nums = {"x":4,"y":3}
+print(add(**nums))
+
+#unpacking keyword argumets
+def named(**kwargs):
+    print(kwargs)
+details = {"name": "bob","age": 25}
+named(**details)
+def print_nicely(**kwargs):
+    named(**kwargs)
+    for arg, value in kwargs.items():
+        print(f"{arg}: {value}")
+print_nicely(name="bob", age=25)
