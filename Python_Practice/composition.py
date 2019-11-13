@@ -1,3 +1,4 @@
+#composition
 class Bookshelf:
     def __init__(self, *books):
         self.books = books
